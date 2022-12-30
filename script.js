@@ -53,7 +53,7 @@ function fetchAndBuildALLSections() {
         .then(res => {
             const categories = res.genres;
             if (Array.isArray(categories) && categories.length) {
-                categories.splice(1,1).forEach(category => {
+                categories.forEach(category => {
                     fetchAndbuildMovieSection(
                         apiPaths.fetchMoviesList(category.id),
                         category.name
@@ -75,7 +75,7 @@ function fetchAndbuildMovieSection(fetchUrl, categoryName) {
             // console.table(res.results)
             const movies = res.results;
             if (Array.isArray(movies) && movies.length) {
-                buildMovieSection(movies.slice(0, 3), categoryName)
+                buildMovieSection(movies, categoryName)
             }
             return movies;
         })

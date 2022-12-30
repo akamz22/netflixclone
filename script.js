@@ -34,7 +34,7 @@ function buildBannerSectiom(movie, index) {
     bannerCont.style.backgroundImage = `url(${imgPath}${movie.backdrop_path})`;
     const div = document.createElement('div');
     div.innerHTML = `
-    <h2 class="banner-title">${movie.title}</h2>
+    <p class="banner-title">${movie.title}</p>
     <p class="banner-info"><img id="top10" src="./assets/top10.png">  #${index} in Movies Today</p>
     <p class="banner-overview">${movie.overview && movie.overview.length > 200 ? movie.overview.slice(0, 200).trim() + "..." : movie.overview}</p>
     <div class="action-button-cont">

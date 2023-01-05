@@ -116,16 +116,17 @@ function buildMovieSection(list, categoryName) {
 
 function searchMovieTrailer(movieName, iFrameId) {
     if (!movieName) return;
-    fetch(apiPaths.searchOnYoutube(movieName))
-        .then(res => res.json())
-        .then(res => {
-            console.log(res.items)
-            const bestResult = res.items[0];
-            const youtubeUrl = `https://www.youtube.com/watch?v=${bestResult.id.videoId}`;
+    // fetch(apiPaths.searchOnYoutube(movieName))
+        // .then(res => res.json())
+        // .then(res => {
+            // console.log(res.items)
+            // const bestResult = res.items[0];
+            // const youtubeUrl = `https://www.youtube.com/watch?v=${bestResult.id.videoId}`;
             const elements = document.getElementById(iFrameId);
-            elements.src =  `https://www.youtube.com/embed/${bestResult.id.videoId}?autoplay=1&controls=0`;
-        })
-        .catch(err => console.error(err));
+            elements.src =  `https://www.youtube.com/embed/WQmGwmc-XUY?autoplay=1&controls=0`;
+            // elements.src =  `https://www.youtube.com/embed/${bestResult.id.videoId}?autoplay=1&controls=0`;
+        // })
+        // .catch(err => console.error(err));
 }
 
 

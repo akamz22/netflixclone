@@ -186,10 +186,8 @@ header.black-bg {
         margin-left: 10px!important;
         margin-right: 10px!important;
     } */
-
     .header-cont {
         margin-bottom: 10px;
-        margin-top: 14px;
     }
 
     .banner-overview,
@@ -212,12 +210,12 @@ header.black-bg {
         background-size: cover;
         background-position: center;
         height: 40vh;
+        padding-top: 10px;
     }
 
     .banner-content {
         margin-left: 10px;
         max-width: 100% !important;
-        padding-top: 10px;
     }
 
     .banner-title {
